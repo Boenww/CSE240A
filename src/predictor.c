@@ -10,13 +10,6 @@
 #include <string.h> // memset
 #include <math.h> //round
 
-//
-// TODO:Student Information
-//
-const char *studentName = "Bowen Zhang";
-const char *studentID   = "A53241738";
-const char *email       = "boz084@eng.ucsd.edu";
-
 //------------------------------------//
 //      Predictor Configuration       //
 //------------------------------------//
@@ -35,9 +28,6 @@ int verbose;
 //      Predictor Data Structures     //
 //------------------------------------//
 
-//
-//TODO: Add your own Branch Predictor data structures here
-//
 uint8_t *globalBHT;
 uint32_t GHR;
 uint8_t *localBHT;
@@ -87,9 +77,6 @@ init_Custom() {
 void
 init_predictor()
 {
-    //
-    //TODO: Initialize Branch Predictor Data Structures
-    //
     switch (bpType) {
         case STATIC:
             break;
@@ -166,10 +153,6 @@ predict_Custom(uint32_t pc) {
 
 uint8_t
 make_prediction(uint32_t pc) {
-    //
-    //TODO: Implement prediction scheme
-    //
-    
     // Make a prediction based on the bpType
     switch (bpType) {
         case STATIC:
@@ -252,9 +235,6 @@ train_Custom(uint32_t pc, uint8_t outcome) {
 
 void
 train_predictor(uint32_t pc, uint8_t outcome) {
-    //
-    //TODO: Implement Predictor training
-    //
     switch (bpType) {
         case STATIC:
             break;
